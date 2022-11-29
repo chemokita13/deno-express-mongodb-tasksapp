@@ -1,0 +1,33 @@
+@api = http://localhost:3000
+
+### Index 
+GET {{api}}/
+
+### Get all tasks
+GET {{api}}/tasks/get
+
+### Get one task
+GET {{api}}/tasks/getOne/:id
+
+### Create new note 
+POST {{api}}/tasks/new
+Content-Type: application/json
+
+{
+    "title":"MY FIRST TASK",
+    "description": "my description",
+    "done": false
+}
+
+### Update task
+PUT {{api}}/tasks/update/:id
+Content-Type: application/json
+
+{
+    "title":"MY UPDATED TASK",
+    "description": "my description",
+    "done":true
+}
+
+### Delete task
+DELETE {{api}}/tasks/delete/:id
